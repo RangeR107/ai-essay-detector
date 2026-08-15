@@ -22,7 +22,7 @@ function PanelHeading({ children }: { children: string }) {
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
         <path d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.5-6.5l-2 2m-9 9l-2 2m0-13l2 2m9 9l2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
       </svg>
-      Evidence
+      {children}
     </div>
   )
 }
