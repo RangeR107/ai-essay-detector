@@ -1,0 +1,22 @@
+# Data — contains redacted-but-real personal essays, kept local-only (see data/README.md)
+data/raw/
+data/processed/
+data/incoming/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.env
+.env.local
+
+# Trained model artifacts (regenerate via scripts, don't commit blobs)
+backend/app/models/*.joblib
+
+# OS
+.DS_Store
