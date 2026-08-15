@@ -3,7 +3,7 @@ Evidence for a sentence's ai_score — plan §5's evidence math.
 
 Round 6: the classifier switched from LogisticRegression to
 GradientBoostingClassifier (real accuracy gain, see
-DOCUMENTS/IMPLEMENTATION.md), which has no per-feature coefficients, so
+docs/IMPLEMENTATION.md), which has no per-feature coefficients, so
 the original `coefficient_i x standardized_value_i` contribution math
 (kept for the git history / old versions of this docstring) no longer
 applies. Replaced with single-feature perturbation, still fully

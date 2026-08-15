@@ -2,7 +2,7 @@
 
 Trained on 530 human admissions essays plus 660 AI-generated ones (Gemini, OpenAI, and Anthropic), with a 1,056-essay slice of DAIGT-v2 added on top for genre and generator diversity. Thresholds are calibrated against held-out data, not guessed.
 
-This document is an accuracy report, not a pitch. Every number below comes from a script in `backend/scripts/` that anyone can re-run — nothing here is estimated. `DOCUMENTS/IMPLEMENTATION.md` has the full build history behind these numbers, and `docs/LIMITATIONS.md` has the consolidated caveats.
+This document is an accuracy report, not a pitch. Every number below comes from a script in `backend/scripts/` that anyone can re-run — nothing here is estimated. `docs/IMPLEMENTATION.md` has the full build history behind these numbers, and `docs/LIMITATIONS.md` has the consolidated caveats.
 
 ## Results at a glance
 
@@ -25,7 +25,7 @@ Ten rounds of changes happened since the first version of this document, and eve
 1. **Threshold calibration** — essay-verdict thresholds recentered on
    real held-out data. A sentence-level threshold change was tested and
    rejected (hurt precision more than it helped balanced accuracy) — see
-   `DOCUMENTS/IMPLEMENTATION.md`.
+   `docs/IMPLEMENTATION.md`.
 2. **Two real fixes to the model and data, adopted after direct testing
    (round 2):**
    - **Theme-tagging was fixed at the source for AI essays.** The AI
@@ -292,7 +292,7 @@ known ground-truth AI span:
 
 Both scored against the production pipeline: sentence threshold fixed at
 0.5 (not the calibrated 0.48 — see the note in the model-under-test
-section above and `DOCUMENTS/IMPLEMENTATION.md` for why a threshold
+section above and `docs/IMPLEMENTATION.md` for why a threshold
 change was tested and rejected for this specific task), short sentences
 context-merged rather than excluded (round 3, above).
 
@@ -411,7 +411,7 @@ never actually measuring correctly for them.
 `backend/scripts/experiment_drop_feature.py` tested removing it before
 adopting; the fix was adopted (round 2) and remains in the production
 feature set. Full before/after numbers for that round are in
-`DOCUMENTS/IMPLEMENTATION.md`.
+`docs/IMPLEMENTATION.md`.
 
 ### The race/ethnicity investigation (round 3, new)
 
@@ -445,7 +445,7 @@ real detection accuracy — unlike the `gltr_pct_top10` fix, which closed
 a comparable gap for essentially free. **This mitigation was tested and
 deliberately not adopted.** Two reasons: (1) this project already
 rejected a comparable accuracy-for-fairness-metric trade once before (the
-sentence-level threshold recalibration, `DOCUMENTS/IMPLEMENTATION.md`) on
+sentence-level threshold recalibration, `docs/IMPLEMENTATION.md`) on
 the grounds that a detector whose entire value proposition is "show
 where and why" needs its underlying accuracy to be trustworthy, and 3
 points is a real cost against a ~72% baseline; (2) the project brief

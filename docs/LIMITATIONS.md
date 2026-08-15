@@ -1,6 +1,6 @@
 # Limitations
 
-Every limitation surfaced across `data/README.md`, `DOCUMENTS/IMPLEMENTATION.md`, and the numbers in `docs/EVALUATION.md` lives here, grouped by how much it should change your trust in a verdict. Most consequential first.
+Every limitation surfaced across `data/README.md`, `docs/IMPLEMENTATION.md`, and the numbers in `docs/EVALUATION.md` lives here, grouped by how much it should change your trust in a verdict. Most consequential first.
 
 ## The two that matter most right now
 
@@ -10,7 +10,7 @@ Every limitation surfaced across `data/README.md`, `DOCUMENTS/IMPLEMENTATION.md`
 
 Everything past this point is the detailed methodology behind those two findings, plus seven smaller, lower-severity gaps. It's kept in full because how we found each of these matters as much as the current number does, but the two above are the ones that should actually change how much you trust a given verdict.
 
-This is the file's tenth revision. The short version of how it got here: an AI-generator-diversity change that failed at one dataset size worked once the training set grew (see #2b for that whole story), a tree-depth increase that looked promising got reverted after it quietly hurt recall on unseen generators, and a bug in how the production model was trained briefly made a later change look better than it was — caught during a cleanup pass and corrected, documented in `DOCUMENTS/IMPLEMENTATION.md`.
+This is the file's tenth revision. The short version of how it got here: an AI-generator-diversity change that failed at one dataset size worked once the training set grew (see #2b for that whole story), a tree-depth increase that looked promising got reverted after it quietly hurt recall on unseen generators, and a bug in how the production model was trained briefly made a later change look better than it was — caught during a cleanup pass and corrected, documented in `docs/IMPLEMENTATION.md`.
 
 Round 6 tested two levers: adding 200 OpenAI/Anthropic essays to AI
 training data (declined — moved nothing) and switching the classifier
@@ -184,7 +184,7 @@ doubled (round 7's DAIGT addition).** This is genuine evidence that
 "more diverse training data helps generalization" is true here, just
 gated by having enough total data for the addition not to be pure
 dilution. **Correction: a production-model training bug (round 10, found
-and fixed during cleanup — see `DOCUMENTS/IMPLEMENTATION.md`) meant the
+and fixed during cleanup — see `docs/IMPLEMENTATION.md`) meant the
 actually-served model differed from what was tested for two rounds;
 fixed, and the real current number is 35.0% (14/40), slightly better
 than the 30.0% originally reported, not worse.** Still a weak catch

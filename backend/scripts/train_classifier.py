@@ -25,7 +25,7 @@ caveat, fixed here now that there's enough essay-level data to do the
 split properly in the first place.
 
 Trained on data/processed/ai_essays.csv (the user's real 500-essay Gemini
-set — see DOCUMENTS/IMPLEMENTATION.md Phase 1 addendum 4) and
+set — see docs/IMPLEMENTATION.md Phase 1 addendum 4) and
 human_essays.csv (500 EssayForum essays). First run against real,
 non-placeholder data on both sides.
 
@@ -54,7 +54,7 @@ PROCESSED_DIR = REPO_ROOT / "data" / "processed"
 MODELS_DIR = REPO_ROOT / "backend" / "app" / "models"
 
 # The 3 smallest combined (human+AI) themes, recomputed after the theme-
-# tagging heuristic improvement (DOCUMENTS/IMPLEMENTATION.md) — AI essays
+# tagging heuristic improvement (docs/IMPLEMENTATION.md) — AI essays
 # now use theme_mapping.py's direct category lookup instead of a keyword
 # guess, and human essays use an improved word-boundary/most-matches-wins
 # heuristic, both of which changed the theme distribution substantially.

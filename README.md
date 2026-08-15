@@ -49,7 +49,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173`. The classifier ships pre-trained (`backend/app/models/*.joblib`), so no training step is required just to run the app. To retrain from scratch or reproduce the evaluation, the scripts are in `backend/scripts/`, and `DOCUMENTS/IMPLEMENTATION.md` has the full build history and the order to run them in.
+Open `http://localhost:5173`. The classifier ships pre-trained (`backend/app/models/*.joblib`), so no training step is required just to run the app. To retrain from scratch or reproduce the evaluation, the scripts are in `backend/scripts/`, and `docs/IMPLEMENTATION.md` has the full build history and the order to run them in.
 
 ## How well does it actually work?
 
@@ -63,7 +63,7 @@ The classifier trains on 2,246 essays: 530 real human essays from four sources, 
 
 **Fairness was investigated, not assumed.** Scored against PERSUADE and ELLIPSE — real student writing with demographic labels — the strict false-positive rate (a confident "Likely AI" call on genuine human writing) sits near zero across every group. The broader false-positive rate (anything short of a confident "Likely Human") has some real gaps by race, ELL status, and economic background, and those gaps move around more than we'd like as the training data changes. Full numbers and the investigation behind them are in [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md).
 
-Along the way we tried a few things that didn't pan out and said so rather than quietly dropping them: a nonlinear classifier swap that helped in-genre accuracy at a real cost to cross-genre generalization, a tree-depth increase that looked free until it turned out to hurt recall on unseen AI tools specifically. Both decisions, and the testing that led to them, are logged in `DOCUMENTS/IMPLEMENTATION.md`.
+Along the way we tried a few things that didn't pan out and said so rather than quietly dropping them: a nonlinear classifier swap that helped in-genre accuracy at a real cost to cross-genre generalization, a tree-depth increase that looked free until it turned out to hurt recall on unseen AI tools specifically. Both decisions, and the testing that led to them, are logged in `docs/IMPLEMENTATION.md`.
 
 ## The honest limitations
 
@@ -79,4 +79,4 @@ This is a research and demonstration tool. It shouldn't be the sole basis for an
 - [`docs/EVALUATION.md`](docs/EVALUATION.md) — the full accuracy report, methodology, and three essays the detector confidently gets wrong, with feature-level explanations for each.
 - [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) — every known weakness, ranked by how much it should change your trust in a verdict, including the fairness investigation.
 - [`data/README.md`](data/README.md) — where every essay came from, how much data there is, and what it doesn't cover.
-- [`DOCUMENTS/IMPLEMENTATION.md`](DOCUMENTS/IMPLEMENTATION.md) — the full chronological build log. Not required reading; it's there for anyone who wants to verify a specific claim or see exactly how a decision got made.
+- [`docs/IMPLEMENTATION.md`](docs/IMPLEMENTATION.md) — the full chronological build log. Not required reading; it's there for anyone who wants to verify a specific claim or see exactly how a decision got made.

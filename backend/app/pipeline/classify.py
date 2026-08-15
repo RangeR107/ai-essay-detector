@@ -5,7 +5,7 @@ deterministically, from our own trained classifier, never from GPT-2 or
 any hosted model (plan §0).
 
 Round 6: swapped from LogisticRegression to GradientBoostingClassifier
-(real, tested accuracy gain — see DOCUMENTS/IMPLEMENTATION.md). Since a
+(real, tested accuracy gain — see docs/IMPLEMENTATION.md). Since a
 tree ensemble has no `.coef_`, `coefficients()` is gone; evidence.py now
 computes per-feature contribution via single-feature perturbation instead
 (see predict_proba_from_scaled/scaled_value below and evidence.py's

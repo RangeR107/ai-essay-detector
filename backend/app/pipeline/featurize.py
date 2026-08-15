@@ -32,7 +32,7 @@ from .textclean import strip_markdown
 # (experiment_drop_feature.py): removing it roughly HALVED the FPR gap
 # (14.7pp -> 7.3pp) for a small in-theme accuracy cost (73.6% -> 72.0%).
 # Adopted given the fairness gap is this project's most consequential
-# limitation. See DOCUMENTS/IMPLEMENTATION.md for the full before/after.
+# limitation. See docs/IMPLEMENTATION.md for the full before/after.
 FEATURE_NAMES = [
     "perplexity",
     "gltr_pct_top100",

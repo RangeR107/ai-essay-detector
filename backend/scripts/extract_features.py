@@ -4,7 +4,7 @@ spaCy stylometry) over every training essay and write a per-sentence
 feature table.
 
 Reads the user's real AI essays (data/processed/ai_essays.csv, 500 essays
-via Gemini API — see DOCUMENTS/IMPLEMENTATION.md Phase 1 addendum 4) rather
+via Gemini API — see docs/IMPLEMENTATION.md Phase 1 addendum 4) rather
 than the Phase 2 placeholder set
 (backend/scripts/build_placeholder_ai_essays.py's ai_essays_placeholder.csv).
 That switch is intentionally a one-line change in load_essays() below, not

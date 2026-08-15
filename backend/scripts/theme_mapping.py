@@ -12,7 +12,7 @@ guessing from text.
 Every one of the 50 categories is assigned to exactly one theme (a
 judgment call where a category could plausibly fit more than one — kept
 to a single best fit rather than splitting, for simplicity). See
-DOCUMENTS/IMPLEMENTATION.md for the before/after theme distribution this
+docs/IMPLEMENTATION.md for the before/after theme distribution this
 produced.
 """
 from __future__ import annotations

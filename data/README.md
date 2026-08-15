@@ -21,7 +21,7 @@ This file documents where every essay in `data/processed/` comes from and what i
 
 What this doesn't cover, in full detail in `docs/LIMITATIONS.md` #8: non-English essays, STEM or technical supplement essays, graduate statements of purpose, and admissions essays under roughly 150 to 300 words depending on the source. The single biggest gap is AI tools not represented in the table at all — anything released after this data was collected, or that we simply never got around to sourcing. The source-by-source detail below, including licensing and how PII was handled, is kept in full because how each source was vetted matters as much as the final count.
 
-`DOCUMENTS/IMPLEMENTATION.md` has the full build history, and `docs/EVALUATION.md` and `docs/LIMITATIONS.md` cover what each addition actually changed about detection accuracy.
+`docs/IMPLEMENTATION.md` has the full build history, and `docs/EVALUATION.md` and `docs/LIMITATIONS.md` cover what each addition actually changed about detection accuracy.
 
 ## Human essays (`data/processed/human_essays.csv`) — 530 essays
 
@@ -118,7 +118,7 @@ Reversed because the tradeoff flipped: the "which website" risk is real
 but small at 30/530 essays (5.7% of the pool), while the single-source
 skew was measurably contributing to the fairness gap in
 `docs/LIMITATIONS.md` #1 — worth the small mixing risk to get a second,
-different population to calibrate against. See `DOCUMENTS/IMPLEMENTATION.md`
+different population to calibrate against. See `docs/IMPLEMENTATION.md`
 for the full before/after evaluation numbers.
 
 ### How we got past the EssayForum block
@@ -259,7 +259,7 @@ evaluation split (`docs/EVALUATION.md` §2) and on which 3 themes get
 held out (`HELD_OUT_THEMES` in `train_classifier.py`, now
 `challenging_belief`/`gratitude`/`obstacle_setback` — previously
 `background_identity`/`captivating_topic`/`gratitude`). Full discussion
-in `DOCUMENTS/IMPLEMENTATION.md`.
+in `docs/IMPLEMENTATION.md`.
 
 ### Known limitation: single-generator (as of this batch — since broadened, see below)
 

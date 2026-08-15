@@ -17,7 +17,7 @@ from pathlib import Path
 # empirically unreliable: on the eval-model's held-out predictions,
 # human/AI mean-score separation was near zero (or inverted) for 1-3 word
 # sentences, then stabilized from 4 words on — see
-# calibrate_thresholds.py and DOCUMENTS/IMPLEMENTATION.md for the actual
+# calibrate_thresholds.py and docs/IMPLEMENTATION.md for the actual
 # numbers this is based on, not a guess. Used by
 # featurize._scoring_spans() to decide when to merge a short sentence's
 # span with a neighbor for feature computation — by the time scores reach
@@ -65,7 +65,7 @@ class TransitionFlag:
 # range — the data doesn't support anything stronger than that, and
 # claiming otherwise would be the same "oversell a weak signal" mistake
 # this project has deliberately avoided elsewhere (see the rejected
-# sentence-threshold recalibration in DOCUMENTS/IMPLEMENTATION.md).
+# sentence-threshold recalibration in docs/IMPLEMENTATION.md).
 HIGH_VOLATILITY_THRESHOLD = 0.26
 HIGH_VOLATILITY_CONFIDENCE_PENALTY = 0.7  # confidence *= this, when tripped
 

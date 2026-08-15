@@ -14,7 +14,7 @@ but needs a fresh pass over the 300 PERSUADE essays to re-measure fairness
 with the variant model (persuade_eval.csv doesn't have cached features).
 
 This is a standalone experiment. It does NOT overwrite classifier.joblib
-— see the script's output / DOCUMENTS/IMPLEMENTATION.md for the adoption
+— see the script's output / docs/IMPLEMENTATION.md for the adoption
 decision after seeing the numbers.
 
 Usage:
