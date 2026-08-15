@@ -2,6 +2,36 @@
 
 A tool that scores college admissions essays for likely AI involvement, sentence by sentence, and shows the evidence behind every score instead of handing back a bare verdict.
 
+## How It Works
+
+The AI Essay Detector analyzes an essay using multiple linguistic and statistical signals rather than relying on a single indicator.
+
+### Analysis Pipeline
+
+1. **Text Preprocessing**  
+   The submitted essay is cleaned and divided into sentences for analysis.
+
+2. **Perplexity Analysis**  
+   The system evaluates how predictable the text is using a language model. Lower perplexity can indicate more predictable/generated writing patterns.
+
+3. **GLTR Analysis**  
+   Token-level prediction ranks are analyzed to identify patterns commonly associated with language-model-generated text.
+
+4. **Stylometric Features**  
+   The system examines writing characteristics such as sentence length, vocabulary usage, punctuation, and other stylistic patterns.
+
+5. **Feature Aggregation**  
+   These measurements are combined into a feature vector and passed to the classification model.
+
+6. **Evidence Generation**  
+   Sentence-level signals are used to identify portions of the essay that contribute most strongly to the prediction.
+
+7. **Final Classification**  
+   The system produces an overall assessment of whether the essay is more likely to be human-written or AI-generated.
+
+> **Note:** AI detection is probabilistic and should not be treated as definitive proof of authorship. The system is designed to provide evidence and an overall likelihood rather than an absolute judgment.
+
+
 ## What it does
 
 Paste an essay in and get back:
