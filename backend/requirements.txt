@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+pydantic
+scikit-learn
+lightgbm
+spacy
+transformers
+torch
+pandas
+numpy
+joblib
+requests
+beautifulsoup4
+lxml
+kaggle
+pytest
+httpx

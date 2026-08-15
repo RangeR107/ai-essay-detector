@@ -1,0 +1,10 @@
+{
+  "likely_human_max": 0.44,
+  "likely_ai_min": 0.6,
+  "_calibration_decision_point": 0.52,
+  "_calibration_essay_balanced_accuracy": 0.952,
+  "_calibration_sentence_threshold_fyi": 0.49,
+  "_calibration_n_essays": 670,
+  "_calibration_n_sentences": 20560,
+  "_note": "See backend/scripts/calibrate_thresholds.py docstring for method and the leakage-avoidance reasoning."
+}
